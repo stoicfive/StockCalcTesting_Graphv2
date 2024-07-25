@@ -1,0 +1,262 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    background: #000000;
+    padding: 70px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+body {
+    background-image: url('Images/blurgradient.jpg');
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 30px;
+    border-top: 3px solid #ffffff;
+    border-bottom: 3px solid #ffffff;
+}
+
+label {
+    color: #ffffff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.initial-inputs input {
+    font-size: 100%;
+}
+
+input {
+    width: calc(100% - 22px);
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border: 3px solid #000000;
+    background: #aeaeae;
+}
+
+.initial-inputs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    /* margin-right: 30%;  */
+    /* brings radio buttons down to new row */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 0;
+}
+
+.input-group:last-child {
+    margin-right: 0;
+}
+
+.leverage-options {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.leverage-options input[type="radio"] {
+    margin-right: 10%;
+    /* Space between radio button and label */
+}
+
+.leverage-options label {
+    margin-right: 5%;
+    /* Space between each set of radio button and label */
+}
+
+label {
+    cursor: pointer;
+}
+
+input[type='radio']:checked+label {
+    font-weight: bold;
+}
+
+select {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    color: #333;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 8px;
+    border-radius: 4px;
+    width: 100%;
+    /* Full width on small devices */
+    max-width: 150px;
+    /* Maximum width on larger screens */
+    margin-bottom: 5%;
+}
+
+select:hover {
+    border-color: #aaa;
+}
+
+select:focus {
+    outline: none;
+    border-color: #79a7d3;
+}
+
+.position-container {
+    border-bottom: 1px solid #ccc;
+}
+
+.position-container input {
+    font-size: 100%;
+}
+
+.position-reminder {
+    text-align: center;
+    font-size: 1.1em;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+input[type=button] {
+    font-size: medium;
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+input[type=button]:hover {
+    transition: 300ms;
+    background: darkred;
+}
+
+.delete-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    max-width: 800px;
+    min-width: 200px;
+    margin: 10px auto;
+}
+
+.delete-button span {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: px) {
+    .delete-button {
+        font-size: medium;
+        width: 196px;
+    }
+}
+
+input[type=button].delete-button:hover {
+    background-color: darkred;
+}
+
+.readonly-font {
+    font-family: 'Raleway', sans-serif;
+    font-size: 100%;
+    font-weight: bold;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* from https: //getcssscan.com/css-buttons-examples */
+.button-64 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    max-width: 800px;
+    min-width: 200px;
+    margin: 10px auto;
+    background: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    color: #FFFFFF;
+    border: 0px;
+    padding: 10px 15px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-64 span {
+
+    border-radius: 5px;
+    transition: 300ms;
+    width: 100%;
+    height: 100%;
+}
+
+.button-64:hover {
+    transition: 300ms;
+    background: rgb(90, 0, 139);
+}
+
+/* .button-64:active,
+.button-64:hover {
+    outline: 0;
+} */
+
+/* .button-64:hover span {
+    background: none;
+} */
+
+@media (min-width: px) {
+    .button-64 {
+    font-size: medium;
+    width: 196px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .container {
+        margin: auto;
+    }
+}
+
+.positive {
+    color: green;
+}
+
+.negative {
+    color: rgb(151, 4, 4);
+}

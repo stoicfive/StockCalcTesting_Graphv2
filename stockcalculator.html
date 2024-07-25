@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script><!--new-->
+    <title>PNL & Equity Ratio Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Stock Equity Ratio and P&L Calculator</h2>
+
+        <div class="initial-inputs">
+            <div class="input-group">
+                <label for="initialEquity">Start of Day Equity ($):</label>
+                <input type="number" id="initialEquity" onchange="updateBuyingPower()">
+            </div>
+            <div class="input-group">
+                <label for="buyingPower">Buying Power ($):</label>
+                <input type="number" id="buyingPower" readonly>
+            </div>
+
+            <div class="leverage-options">
+                <input type="radio" id="leverage2x" name="leverage" value="2" checked onchange="updateBuyingPower()">
+                <label for="leverage2x">2x</label>
+                <input type="radio" id="leverage4x" name="leverage" value="4" onchange="updateBuyingPower()">
+                <label for="leverage4x">4x</label>
+            </div>
+        </div>
+
+        <div id="positions">
+        </div>
+
+        <canvas id="stockGraph" width="400" height="400"></canvas> <!--new-->>
+
+        <div class="button-center-container">
+            <button class="button-64" role="button" onclick="portfolioCalculator.addPositionFields()"><span class="text">Add
+                    Another Position</span></button>
+            <button class="button-64" role="button" onclick="portfolioCalculator.calculateTotals()"><span class="text">Calculate
+                    Totals</span></button>
+        </div>
+
+        <label>Initial Investment ($):</label>
+        <input type="text" id="initialInvestment" class="readonly-font" readonly><br>
+
+        <label>Net Equity ($):</label>
+        <input type="text" id="netEquity" class="readonly-font" readonly><br>
+
+        <label>Total Exposure ($):</label>
+        <input type="text" id="totalExposure" class="readonly-font" readonly><br>
+
+        <label>Equity Ratio (%):</label>
+        <input type="text" id="equityRatio" class="readonly-font" readonly><br>
+
+        <label>Price for 25% Equity Ratio ($):</label> <!--new-->
+        <input type="text" id="priceFor25EquityRatio" class="readonly-font" readonly><br>
+
+        <label>Price for 15% Equity Ratio ($):</label> <!--new-->
+        <input type="text" id="priceFor15EquityRatio" class="readonly-font" readonly><br>
+
+        <label>Net P&L ($):</label>
+        <input type="text" id="totalPL" class="readonly-font" readonly><br>
+
+        <label>Total Return (%):</label>
+        <input type="text" id="plPercentage" class="readonly-font" readonly><br>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
